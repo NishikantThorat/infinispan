@@ -1,0 +1,10 @@
+language: java
+dist: bionic
+arch:
+  - ppc64le
+java:
+  - 1.11
+install: openssl-devel maven java-11-openjdk-devel
+
+script:
+  - mvn -s maven-settings.xml clean install -DskipTests=true
